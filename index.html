@@ -1,0 +1,205 @@
+<!-- AC Company | Online Course Management System -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>easySOFT | Online Courses</title>
+  <link rel="icon" type="favicon" href="project1.jpeg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">easySOFT</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Courses</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="reveal">
+    <div class="hero-content">
+      <h1>Empowering Learners Everywhere</h1>
+      <p>Modern online course solutions tailored for you</p>
+      <button id="exploreBtn">Explore Courses</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="reveal">
+    <h2>About Us</h2>
+    <p class="about-text">
+      We are a passionate team committed to reshaping the future of education. Through AC Company, we provide comprehensive online learning solutions, instructor-led training, and interactive content designed to help individuals and organizations grow in the digital age.
+    </p>
+    
+    <!-- Watch animation container -->
+    <div class="watch-container">
+      <div class="watch">
+        <div class="dial"></div>
+        <div class="center"></div>
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+      </div>
+      <div class="watch">
+        <div class="dial"></div>
+        <div class="center"></div>
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+      </div>
+      <div class="watch">
+        <div class="dial"></div>
+        <div class="center"></div>
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Courses Section -->
+  <section id="services" class="reveal">
+    <h2>Our Courses</h2>
+    <div class="services-list">
+
+      <div class="course" data-course="webdesign">
+        <h3>Web Design & Development</h3>
+        <p>Duration: 6 Months<br>Price: ৳25,000<br>What You Learn: HTML, CSS, JavaScript basics & advanced</p>
+      </div>
+
+      <div class="course" data-course="mernstack">
+        <h3>MERN Stack Development</h3>
+        <p>Duration: 6 Months<br>Price: ৳30,000<br>What You Learn: MongoDB, Express.js, React.js, Node.js</p>
+      </div>
+
+      <div class="course" data-course="python">
+        <h3>Python Programming</h3>
+        <p>Duration: 6 Months<br>Price: ৳20,000<br>What You Learn: Python basics to advanced, OOP</p>
+      </div>
+
+      <div class="course" data-course="java">
+        <h3>Java Programming</h3>
+        <p>Duration: 6 Months<br>Price: ৳22,000<br>What You Learn: Java SE fundamentals, OOP, GUI basics</p>
+      </div>
+
+      <div class="course" data-course="digitalmarketing">
+        <h3>Digital Marketing</h3>
+        <p>Duration: 6 Months<br>Price: ৳18,000<br>What You Learn: SEO, SEM, Social Media Marketing</p>
+      </div>
+
+      <div class="course" data-course="uiux">
+        <h3>UI/UX Design</h3>
+        <p>Duration: 6 Months<br>Price: ৳24,000<br>What You Learn: Figma, Adobe XD, Prototyping</p>
+      </div>
+
+      <div class="course" data-course="freelancing">
+        <h3>Freelancing & Outsourcing</h3>
+        <p>Duration: 6 Months<br>Price: ৳15,000<br>What You Learn: Freelancing platforms, client handling</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="reveal">
+  <h2>My Portfolio</h2>
+  <div class="portfolio-gallery">
+    <div class="portfolio-item" data-project="1">
+      <img src="project1.jpeg" alt="Project 1" />
+      <h3>Project One</h3>
+      <p>Short description of Project One.</p>
+    </div>
+    <div class="portfolio-item" data-project="2">
+      <img src="project2.jpeg" alt="Project 2" />
+      <h3>Project Two</h3>
+      <p>Short description of Project Two.</p>
+    </div>
+    <div class="portfolio-item" data-project="3">
+      <img src="project3.jpeg" alt="Project 3" />
+      <h3>Project Three</h3>
+      <p>Short description of Project Three.</p>
+    </div>
+    <div class="portfolio-item" data-project="4">
+      <img src="project4.jpeg" alt="Project 4" />
+      <h3>Project Four</h3>
+      <p>Short description of Project Four.</p>
+    </div>
+    <div class="portfolio-item" data-project="5">
+      <img src="project5.jpeg" alt="Project 5" />
+      <h3>Project Five</h3>
+      <p>Short description of Project Five.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Portfolio Modal ======= -->
+<div id="portfolioModal" class="modal">
+  <div class="modal-content">
+    <span id="projectModalClose" class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <ul id="modalFeatures"></ul>
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <h2>Contact Us</h2>
+    <p style="text-align:center; max-width: 600px; margin: auto; color: var(--text-muted); font-size: 1.1rem;">
+      Have questions or want to enroll? Reach out to us via the form below or use the contact details.
+    </p>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formResponse" style="text-align:center;margin-top:1rem;color:#4caf50;display:none;">
+      Thank you for your message!
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9026563608203!2d90.39129281465548!3d23.75088519470268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b853b512345f%3A0xabcdef1234567890!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 10px; margin-top: 2rem;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="contact-info" style="max-width: 600px; margin: 2rem auto; text-align: center; color: var(--text-muted); font-size: 1rem;">
+      <p><strong>Phone:</strong> +880 1234 567890</p>
+      <p><strong>Email:</strong> aronnochowdhury220@gmail.com</p>
+      <p><strong>Address:</strong> 123, AC Street, Dhaka, Bangladesh</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Present BY Aronno Chowdhury and Team 2025</p>
+  </footer>
+
+  <!-- COURSE DETAILS MODAL -->
+  <div id="courseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modalCourseTitle"></h3>
+      <div id="modalCourseDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>

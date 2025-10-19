@@ -350,3 +350,18 @@ window.addEventListener('keydown', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
+
+const menu = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  sidebar.classList.toggle('active');
+});
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+    sidebar.classList.remove('active');
+  });
+});

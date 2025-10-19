@@ -78,6 +78,96 @@ header {
   border-bottom: 1px solid var(--primary);
 }
 
+/* === Mobile Sidebar Navigation === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 5px;
+  width: 26px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: 0.3s ease;
+  box-shadow:
+    0 0 6px var(--primary),
+    0 0 10px var(--accent);
+}
+
+/* Sidebar Style */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: -4px 0 25px rgba(0, 255, 136, 0.3);
+  transition: 0.4s ease;
+  padding-top: 80px;
+  z-index: 1500;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 30px;
+  flex-direction: column;
+}
+
+.sidebar li {
+  margin: 25px 0;
+}
+
+.sidebar a {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: var(--accent);
+  transform: translateX(8px);
+  text-shadow:
+    0 0 10px var(--accent),
+    0 0 20px var(--accent);
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animate hamburger to “X” when active */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
 .logo {
   font-size: 2.2rem;
   font-weight: 900;

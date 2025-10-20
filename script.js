@@ -1,3 +1,18 @@
+const menu = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  sidebar.classList.toggle('active');
+});
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+    sidebar.classList.remove('active');
+  });
+});
+
 // ======= Scroll Reveal Effect =======
 const reveals = document.querySelectorAll('.reveal');
 
@@ -351,17 +366,3 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-const menu = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
-
-menu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  sidebar.classList.toggle('active');
-});
-
-document.querySelectorAll('.sidebar a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-    sidebar.classList.remove('active');
-  });
-});

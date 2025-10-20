@@ -297,53 +297,99 @@ nav a:hover::after {
 }
 
 /* === About Section === */
-#about {
-  background: linear-gradient(135deg, #111111, #1b1b1b);
-  padding: 80px 40px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 80px;
-  border-radius: 16px;
-  box-shadow:
-    0 0 30px rgba(0, 255, 136, 0.15),
-    inset 0 0 25px rgba(0, 255, 136, 0.08);
-  user-select: none;
-}
-
-#about h2 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  color: var(--primary);
+/* Wrapper for inner content */
+.reveal h2{
   text-align: center;
-  margin-bottom: 30px;
-  text-shadow:
-    0 0 10px var(--primary),
-    0 0 20px var(--accent),
-    0 0 30px var(--accent);
-  animation: fadeInDown 1.2s ease forwards;
+  margin-top: 10px;
+}
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
 }
 
-.about-text {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  line-height: 1.8;
-  font-weight: 500;
-  transition: transform 0.4s ease, color 0.3s ease;
-  position: relative;
-  animation: floatUpDown 6s ease-in-out infinite;
-  user-select: text;
-}
-.about-text:hover {
-  transform: scale(1.05);
-  color: var(--text-light);
-  text-shadow:
-    0 0 8px var(--primary),
-    0 0 15px var(--accent);
+/* Lead paragraph for mission statement */
+.about-text-lead {
+    font-size: 1.4rem; /* Slightly larger than standard text */
+    color: var(--primary); /* Highlight with the primary color */
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.4);
 }
 
+/* Subheadings for better structure */
+#about h3 {
+    font-size: 1.8rem;
+    color: var(--accent); /* Use accent color for sub-section titles */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 8px var(--accent);
+}
+
+/* List for "What We Do" */
+#about ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 20px auto 40px;
+    max-width: 600px;
+    text-align: left;
+}
+
+#about ul li {
+    background: #1e1e1e;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+    font-size: 1.15rem;
+    color: var(--text-light);
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+}
+
+#about ul li:hover {
+    border-left: 4px solid var(--accent);
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(17, 255, 180, 0.3);
+}
+
+/* Grid for Core Values */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.values-grid p {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 15px rgba(17, 255, 180, 0.2);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: 0.4s ease;
+}
+
+.values-grid p strong {
+    color: var(--primary);
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px var(--primary);
+}
+
+.values-grid p:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+}
 /* Watch button with icon and glow */
 .watch-btn {
   display: inline-flex;
